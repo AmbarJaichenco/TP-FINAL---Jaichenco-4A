@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class arrow : MonoBehaviour
 {
-    int puntos = 0;
+    GameObject manager;
+    ControlManager controller;
+    bool collide;
 
     // Start is called before the first frame update
     void Start()
     {
+        manager = GameObject.Find("[GAMEMANAGER]");
+        controller = manager.GetComponent<ControlManager>();
+        collide = false;
     }
 
     // Update is called once per frame
@@ -17,18 +22,40 @@ public class arrow : MonoBehaviour
         
     }
 
-    void OnCollisionEnter()
+    void OnCollisionEnter(Collision col)
     {
-        Destroy(gameObject); 
-    }
-    void OnTriggerEnter(Collider col)
-    {
-        if (col.tag == "Amarillo75")
+        if (!collide)
         {
-            Debug.Log("Amarillo75");
-            puntos = puntos + 75;
-            Destroy(gameObject);
+            if (col.gameObject.name == "Azul25")
+            {
+                controller.ActualizarPuntaje(25);
+                Debug.Log("Azul");
+            }
+
+            if (col.gameObject.name == "Amarillo75")
+            {
+                controller.ActualizarPuntaje(75);
+                Debug.Log("Amarillo");
+            }
+
+            if (col.gameObject.name == "Negro10")
+            {
+                controller.ActualizarPuntaje(10);
+                Debug.Log("Negro");
+            }
+
+            if (col.gameObject.name == "Rojo50")
+            {
+                controller.ActualizarPuntaje(50);
+                Debug.Log("Rojo");
+            }
+            collide = true;
         }
+        Destroy(gameObject);
+    }
+    void OnTriggerEnter()
+    {
+        
 
     }
 
