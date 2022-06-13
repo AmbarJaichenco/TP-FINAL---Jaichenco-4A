@@ -51,17 +51,6 @@ public class arrow : MonoBehaviour
             }
             collide = true;
         }
-        Destroy(gameObject);
+        gameObject.GetComponent<Rigidbody>().isKinematic = true;
     }
-    void OnTriggerEnter()
-    {
-        
-
-    }
-
-    
-
-
-
-
 }
