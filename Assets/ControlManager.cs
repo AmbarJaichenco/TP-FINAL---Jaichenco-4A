@@ -6,10 +6,11 @@ using UnityEngine.UI;
 public class ControlManager : MonoBehaviour
 {
     public Text cartel;
-    public int puntaje;
+    public static int puntaje;
     public GameObject panel;
     public GameObject arrowfija;
     public GameObject arrowprefab;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -18,11 +19,7 @@ public class ControlManager : MonoBehaviour
         panel.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+   
 
     public void ActualizarPuntaje(int puntos)
     {
