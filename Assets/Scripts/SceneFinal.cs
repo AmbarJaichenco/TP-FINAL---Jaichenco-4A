@@ -7,21 +7,22 @@ public class SceneFinal : MonoBehaviour
 {
     public Text winloose;
     public int puntfinal;
-    public Image star;
-    public int x;
+    public GameObject yey;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        x = -100;
         puntfinal = ControlManager.puntaje;
         if (puntfinal >= 200)
         {
             winloose.text = "GANASTE!!";
-            for (int i = 0; i <3; i++)
+            for (int i = 0; i <50; i++)
             {
-                Instantiate(star, new Vector3(x, -30, 0), Quaternion.identity);
-                x = x + 100;
+                Debug.Log("funca");
+
+                Instantiate(yey, new Vector3(-3, 5.5f, 61.9f), Quaternion.identity);
+
             }
         }
         else

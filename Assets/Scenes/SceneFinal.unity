@@ -466,8 +466,8 @@ Canvas:
   m_GameObject: {fileID: 1564102651}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1716390725}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -611,8 +611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winloose: {fileID: 300655489}
   puntfinal: 0
-  star: {fileID: 347252001671938789, guid: dd2e1a3e06bc65a4d861e29d22f0f8b2, type: 3}
-  x: 0
+  yey: {fileID: 7912960815221554538, guid: f54643a8dea84e84ca88cc2ef798edb5, type: 3}
 --- !u!4 &2042872242
 Transform:
   m_ObjectHideFlags: 0
